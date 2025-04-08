@@ -24,6 +24,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip  # Upgrade pip
+        sudo apt-get update  # Update package list
+        sudo apt-get install -y python3-tk  # Install Tkinter using apt (Ubuntu)
         pip install -r requirements.txt  # Install dependencies from the requirements file
 
     - name: Run Python app
